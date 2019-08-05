@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+
+.home-container {
+  width: 90%;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.5px solid $secondary-accent;
+  border-radius: 0.5rem;
+  background: $base-color;
+  padding: 2rem 1rem;
+
+  h1 {
+    font-size: 2.2rem;
+  }
+  @media #{$desktop} {
+    width: 90%;
+    margin: 0 auto;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+  }
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > * {
+    margin-bottom: 1rem;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+.head-shot {
+  width: 50%;
+  height: auto;
+}
