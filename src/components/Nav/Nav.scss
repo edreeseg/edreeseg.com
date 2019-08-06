@@ -36,7 +36,6 @@
   }
 }
 .nav-item {
-  color: $secondary-color;
   height: 100%;
 
   a {
@@ -46,6 +45,7 @@
     justify-content: center;
     align-items: center;
     padding: 0 15%;
+    color: $secondary-color;
 
     &.active {
       font-weight: bold;
