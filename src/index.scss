@@ -1,4 +1,4 @@
-@import "./styles/variables.scss";
+@import './styles/variables.scss';
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -122,7 +122,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 table {
@@ -138,10 +138,10 @@ table {
 }
 html {
   font-size: 62.5%;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 body {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   padding-top: $nav-height-mobile;
   background: #fafafa;
 
