@@ -7,12 +7,21 @@ function Project({
   technologies,
   responsibilities,
   img,
+  current,
+  changeSelected,
 }) {
   return (
     <section className="project-card">
-      <img src={img} alt={name} />
+      <div className="project-img-container" 
+        onMouseOver={() => changeSelected(name)}
+        onMouseOut={() => changeSelected(name)}
+      >
+        <div className={`project-overlay${name === current ? ' overlay-active' : ''}`}>
+          <p>{description}</p>
+        </div>
+        <img src={img} alt={name} />
+      </div>
       <h2>{name}</h2>
-      <p>{description}</p>
     </section>
   );
 }

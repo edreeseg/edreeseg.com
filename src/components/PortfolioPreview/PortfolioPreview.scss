@@ -11,15 +11,42 @@
   background: $base-color;
   border-radius: 0.5rem;
 
+  .project-img-container {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .project-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(34, 34, 34, 0.9);
+
+    &.overlay-active {
+      display: flex;
+    }
+
+    p {
+      color: $base-color;
+      width: 80%;
+      line-height: 2.1rem;
+    }
+  }
+
   h2 {
     color: $secondary-color;
     font-size: 2rem;
-    margin: 1rem 0;
+    margin: 1rem 2.5%;
   }
 
   img {
-    width: 95%;
-    margin: 0 auto;
+    width: 100%;
     display: block;
     border: 1px solid #222;
   }

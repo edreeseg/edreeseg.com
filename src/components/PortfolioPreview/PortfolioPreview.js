@@ -6,7 +6,7 @@ class PortfolioPreview extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      current: 0,
+      current: null,
       projects: [
         {
           name: 'Inquiry',
@@ -80,17 +80,18 @@ class PortfolioPreview extends React.Component {
       ],
     };
   }
-  changeSelected = next => ev => {
-    let current = next ? this.state.current + 1 : this.state.current - 1;
-    if (current < 0) current = this.state.projects.length - 1;
-    if (current > this.state.projects.length - 1) current = 0;
-    this.setState({ current });
+  changeSelected = name => {
+    this.setState(prevState => {
+      return {
+        current: prevState.current === name ? null : name,
+      };
+    });
   };
   render() {
     return (
       <section className="portfolio-preview">
         {this.state.projects.map(project => (
-          <Project key={project.name} {...project} />
+          <Project key={project.name} current={this.state.current} changeSelected={this.changeSelected} {...project} />
         ))}
       </section>
     );
