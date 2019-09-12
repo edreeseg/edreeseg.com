@@ -1,13 +1,18 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 import './About.scss';
 
 class About extends React.Component {
   render(){
     return (
-      <section className="about-container">
-        <h2>About</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec vestibulum nunc. Maecenas congue erat quis odio euismod convallis. Donec libero dui, pharetra vel porta eget, molestie at mi. Vestibulum dignissim posuere libero at aliquam. Cras ipsum tellus, dignissim eget lectus non, porta consequat arcu. Quisque vulputate, dolor feugiat mattis fermentum, justo lacus facilisis magna, id eleifend massa est vitae enim. Phasellus ipsum nulla, pulvinar ut pulvinar non, ultrices eu dolor. Ut at libero non turpis vehicula vestibulum quis sed orci. Proin sit amet nisi et ipsum venenatis scelerisque vel quis velit. Aliquam at elit et justo aliquet pellentesque. Maecenas luctus suscipit ipsum, eget luctus justo ullamcorper in.</p>
-      </section>
+      <Element name="about">
+        <section className="about-container">
+          <h2>About</h2>
+          <p>Hi, I'm Ed. I'm a full stack web developer with an interest in designing intuitive user interfaces, implementing efficient logic in data handling, and watching projects come alive through hard work and careful planning.</p>
+          <p>I was lucky enough to be introduced to the field of web development by a close friend, who recommended it as a valuable skill to learn in my spare time.  I knew almost immediately that I wanted to make a career change, and invested myself wholly in my studies from that point forward.</p>
+          <p>I have practical experience working in a team environment to build web applications using technologies such as React, Node, and PostgreSQL.  I’m always looking to accumulate knowledge and examine how I can apply that knowledge to my own projects.</p>
+        </section>
+      </Element>
     );
   }
 }

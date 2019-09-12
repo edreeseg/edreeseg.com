@@ -1,7 +1,9 @@
 import React from "react";
 import Intro from '../Intro/Intro';
-import PortfolioPreview from '../PortfolioPreview/PortfolioPreview';
 import About from '../About/About';
+import PortfolioPreview from '../PortfolioPreview/PortfolioPreview';
+import Contact from '../Contact/Contact';
+import Resume from '../Resume/Resume';
 import "./Home.scss";
 
 class Home extends React.Component {
@@ -11,6 +13,8 @@ class Home extends React.Component {
         <Intro />
         <About />
         <PortfolioPreview />
+        <Resume />
+        <Contact />
       </section>
     );
   }

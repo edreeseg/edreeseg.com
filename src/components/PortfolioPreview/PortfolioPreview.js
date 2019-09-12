@@ -1,4 +1,5 @@
 import React from 'react';
+import { Element } from 'react-scroll';
 import Project from './Project';
 import './PortfolioPreview.scss';
 
@@ -89,11 +90,14 @@ class PortfolioPreview extends React.Component {
   };
   render() {
     return (
-      <section className="portfolio-preview">
-        {this.state.projects.map(project => (
-          <Project key={project.name} current={this.state.current} changeSelected={this.changeSelected} {...project} />
-        ))}
-      </section>
+      <Element name="projects">
+        <section className="portfolio-preview">
+          <h2>Projects</h2>
+          {this.state.projects.map(project => (
+            <Project key={project.name} current={this.state.current} changeSelected={this.changeSelected} {...project} />
+          ))}
+        </section>
+      </Element>
     );
   }
 }

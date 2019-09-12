@@ -9,12 +9,6 @@ function Intro(props) {
         alt="head-shot"
         className="head-shot"
       />
-      <p>
-        Hi, I'm Ed. I'm a full stack web developer with an interest in designing
-        intuitive user interfaces, implementing efficient logic in data
-        handling, and watching projects come alive through hard work and careful
-        planning.
-      </p>
     </section>
   );
 }

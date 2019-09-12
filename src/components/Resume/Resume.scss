@@ -1,22 +1,21 @@
 @import '../../styles/variables.scss';
 
-.about-container {
+.resume-container {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 2rem 1rem;
     border: 0.5px solid $secondary-accent;
     border-radius: 0.5rem;
     background: $base-color;
-    padding: 2rem 1rem;
-    margin: 1rem 0;
 
     h2 {
         color: $secondary-color;
         font-size: 2rem;
-        margin: 1rem 0;
+        margin-bottom: 2.5rem;
     }
-    p {
-        margin-bottom: 1rem;
 
-        &:last-child {
-            margin-bottom: 0;
-        }
+    img {
+        width: 100%;
+        border: 1px solid black;
     }
 }

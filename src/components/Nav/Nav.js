@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 import "./Nav.scss";
 
 export default class Nav extends React.Component {
@@ -8,18 +8,44 @@ export default class Nav extends React.Component {
       <nav className="nav">
         <ul className="nav-items">
           <li className="nav-item">
-            <NavLink exact to="/">
-              Home
-            </NavLink>
+            <Link 
+              to="about"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+            >
+              About
+            </Link>
           </li>
           <li className="nav-item">
-            <NavLink to="/about">About</NavLink>
+          <Link 
+              to="projects"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+            >
+              Projects
+            </Link>
           </li>
           <li className="nav-item">
-            <NavLink to="/portfolio">Portfolio</NavLink>
+          <Link 
+              to="resume"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+            >
+              Resume
+            </Link>
           </li>
           <li className="nav-item">
-            <NavLink to="/contact">Contact</NavLink>
+          <Link 
+              to="contact"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>
