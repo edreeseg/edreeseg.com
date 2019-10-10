@@ -63,39 +63,45 @@
     width: 0;
 }
 .nav-slide-enter-active {
-    width: 40vw;
-    transition: width 200ms;
+    width: 30vw;
+    transition: width 300ms;
 }
 .nav-slide-enter-done {
-    width: 40vw;
+    width: 30vw;
 }
 .nav-slide-exit {
-    width: 40vw;
+    width: 30vw;
 }
 .nav-slide-exit-active {
     width: 0;
-    transition: width 200ms;
+    transition: width 300ms;
 }
 .nav-slide-exit-done {
     width: 0;
 }
-.title-slide-enter {
+.button-slide-enter {
+    left: 5%;
     transform: translateX(0);
 }
-.title-slide-enter-active {
-    transform: translateX(40vw);
-    transition: transform 200ms;
+.button-slide-enter-active {
+    left: 90%;
+    transform: translateX(-50%);
+    transition: left 300ms, transform 200ms;
 }
-.title-slide-enter-done {
-    transform: translateX(40vw);
+.button-slide-enter-done {
+    left: 90%;
+    transform: translateX(-50%);
 }
-.title-slide-exit {
-    transform: translateX(40vw);
+.button-slide-exit {
+    left: 90%;
+    transform: translateX(-50%);
 }
-.title-slide-exit-active {
+.button-slide-exit-active {
+    left: 5%;
     transform: translateX(0);
-    transition: transform 200ms;
+    transition: left 300ms, transform 200ms;
 }
-.title-slide-exit-done {
+.button-slide-exit-done {
+    left: 5%;
     transform: translateX(0);
 }
