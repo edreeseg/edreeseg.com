@@ -141,21 +141,6 @@ html {
   font-family: 'Roboto', sans-serif;
 }
 body {
-  font-size: 1.7rem;
-  padding-top: $nav-height-mobile;
-  background: #fafafa;
-
-  @media #{$desktop} {
-    padding-top: 0;
-    padding-left: $nav-width-desktop;
-  }
-}
-#root {
-  width: 100%;
-}
-.canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  font-size: 1.6rem;
+  background: $base-color;
 }

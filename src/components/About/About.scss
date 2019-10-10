@@ -1,22 +1,28 @@
 @import '../../styles/variables.scss';
 
 .about-container {
-    border: 0.5px solid $secondary-accent;
-    border-radius: 0.5rem;
-    background: $base-color;
-    padding: 2rem 1rem;
-    margin: 1rem 0;
+    margin-top: 50px;
+}
 
-    h2 {
-        color: $secondary-color;
-        font-size: 2rem;
-        margin: 1rem 0;
-    }
-    p {
-        margin-bottom: 1rem;
+.about-calls-to-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        &:last-child {
-            margin-bottom: 0;
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 2%;
+        background: $dark-accent;
+        color: $base-color;
+        border-radius: 5px;
+
+        &:first-child {
+            margin-right: 10%;
+        }
+        &:hover {
+            color: $accent-color;
         }
     }
 }
