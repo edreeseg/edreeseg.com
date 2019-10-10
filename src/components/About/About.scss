@@ -26,3 +26,27 @@
         }
     }
 }
+.about-synopsis {
+    width: 75%;
+    margin: 25px auto;
+    text-align: center;
+
+    p {
+        font-size: 1.8rem;
+
+        &:first-child {
+            margin-bottom: 15px;
+        }
+    }
+}
+.about-social-media {
+    display: flex;
+    justify-content: center;
+
+    a {
+        margin-left: 10%;
+    }
+    a:first-child {
+        margin-left: 0;
+    }
+}
