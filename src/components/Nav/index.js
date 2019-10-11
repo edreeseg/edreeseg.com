@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { CSSTransition } from 'react-transition-group';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faArrowAltCircleRight, faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Nav.scss';
 
@@ -9,19 +9,17 @@ function Nav() {
     const [open, setOpen] = useState(false);
     return (
         <nav className="nav-container">
-            <CSSTransition in={open} timeout={200} classNames="title-slide">
+            <CSSTransition in={open} timeout={300} classNames="button-slide">
                 <button className="nav-open-links" onClick={() => setOpen(prevOpen => !prevOpen)}>
-                    <FontAwesomeIcon icon={faBars} style={{ color: '#D9DCDC' }} />
+                    <FontAwesomeIcon icon={open ? faArrowAltCircleLeft : faArrowAltCircleRight} style={{ color: '#040817' }} size="2x" />
                 </button>
             </CSSTransition>
-            {/* <CSSTransition in={open} timeout={200} classNames="title-slide"> */}
             <h1>Ed Reeseg</h1>
-            {/* </CSSTransition> */}
-            <CSSTransition in={open} timeout={200} classNames="nav-slide">
+            <CSSTransition in={open} timeout={300} classNames="nav-slide">
                 <div className="nav-links">
-                    <Link to="projects-container">Projects</Link>
-                    <Link to="skills-container">Skills</Link>
-                    <Link to="contact-container">Contact</Link>
+                    <Link to="projects-container" spy={true} smooth={true} offset={-120} duration={500}>Projects</Link>
+                    <Link to="skills-container" spy={true} smooth={true} offset={-120} duration={500}>Skills</Link>
+                    <Link to="contact-container" spy={true} smooth={true} offset={-120} duration={500}>Contact</Link>
                 </div>
             </CSSTransition>
         </nav>

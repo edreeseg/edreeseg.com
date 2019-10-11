@@ -24,6 +24,11 @@
 }
 .greeting-text {
     position: relative;
+    font-size: 3.7vw;
+
+    @media #{$tablet} {
+        font-size: 1.6rem;
+    }
 
     span {
         color: $accent-color;
