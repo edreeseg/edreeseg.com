@@ -44,7 +44,7 @@ function Projects() {
     ]);
     return (
         <section className="projects-container">
-            <h2>My Projects</h2>
+            <h2>Projects</h2>
             {projects.map(project => <ProjectCard key={project.name} info={project} />)}
         </section>
     );

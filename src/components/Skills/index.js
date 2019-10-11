@@ -16,7 +16,16 @@ class Skills extends React.Component {
             bottom: null,
             height: null,
             width: null,
-            icons: [faHtml5, faCss3, faLess, faSass, faReact, faJs, faNode, faPython],
+            icons: [
+                { icon: faHtml5, color: '#E44D26' },
+                { icon: faCss3, color: '#1572B6' },
+                { icon: faLess, color: '#2A4D80' },
+                { icon: faSass, color: '#CB6699' },
+                { icon: faReact, color: '#61dbfb' },
+                { icon: faJs, color: '#F0DB4F' },
+                { icon: faNode, color: '#83CD29' },
+                { icon: faPython, color: '#3572A5' }
+            ],
             paused: false,
         };
         this.containerRef = React.createRef();
@@ -47,10 +56,11 @@ class Skills extends React.Component {
                     <FontAwesomeIcon onClick={this.handlePause} icon={this.state.paused ? faPlayCircle : faPauseCircle} size="2x" />
                     {
                         this.state.top ?
-                            this.state.icons.map(icon =>
+                            this.state.icons.map(({ icon, color }) =>
                                 <SkillIcon
                                     key={icon.iconName}
                                     icon={icon}
+                                    color={color}
                                     left={this.state.left}
                                     right={this.state.right}
                                     top={this.state.top}

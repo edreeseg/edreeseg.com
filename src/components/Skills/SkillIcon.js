@@ -52,16 +52,27 @@ class SkillIcon extends React.Component {
         });
     }
     render() {
-        return (
-            <FontAwesomeIcon icon={this.props.icon} style={
-                {
-                    position: 'absolute',
-                    top: this.state.y,
-                    left: this.state.x,
-                    fontSize: this.state.size,
-                }
-            } />
-        );
+        return this.props.icon.iconName === 'js' ? (
+            <div style={{
+                position: 'absolute',
+                top: this.state.y,
+                left: this.state.x,
+                fontSize: this.state.size,
+                height: this.state.size,
+                background: 'black',
+            }}>
+                <FontAwesomeIcon color={this.props.color} icon={this.props.icon} />
+            </div>
+        ) : (
+                <FontAwesomeIcon color={this.props.color} icon={this.props.icon} style={
+                    {
+                        position: 'absolute',
+                        top: this.state.y,
+                        left: this.state.x,
+                        fontSize: this.state.size,
+                    }
+                } />
+            );
     }
 }
 
