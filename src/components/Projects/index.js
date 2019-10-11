@@ -6,7 +6,7 @@ function Projects() {
     const [projects] = useState([
         {
             name: 'Inquiry',
-            description: 'Inquiry is an application that facilitates communication between independent contractors and those looking to hire them - providing for simplified scheduling and convenient communication between parties.',
+            description: 'Inquiry facilitates communication between independent contractors and those looking to hire them - providing for simplified scheduling and convenient communication between parties.',
             role: 'Full-Stack Software Engineer',
             technologies: ['React', 'Redux', 'React Hooks', 'OAuth2', 'Node.js', 'Express', 'BCrypt.js', 'Jest', 'PostgreSQL', 'Semantic HTML'],
             img: 'https://i.imgur.com/NJdZzrM.png',
@@ -15,7 +15,7 @@ function Projects() {
         },
         {
             name: 'Tipsease',
-            description: 'Tipsease is an application designed to make it easier for service workers to receive tips from customers independently from their employer.',
+            description: 'Tipsease makes it easier for service workers to receive tips from customers independently from their employer.',
             role: 'Project Lead',
             technologies: ['React', 'React Hooks', 'Formik', 'Knex.js', 'SQLite3', 'PostgreSQL', 'Node.js', 'Express'],
             img: 'https://i.imgur.com/EBvODJ2.png',
@@ -24,7 +24,7 @@ function Projects() {
         },
         {
             name: 'Souper Stocker',
-            description: 'Souper Stocker is an application that allows soup kitchens to manage their inventory - eliminating the hassle of knowing exactly what the kitchen needs, and allowing users to set levels at which they will be warned of low quantity.',
+            description: 'Souper Stocker allows soup kitchens to manage their inventory - eliminating the hassle of knowing exactly what the kitchen needs, and allowing users to set levels at which they will be warned of low quantity.',
             role: 'Front-End Developer',
             technologies: ['React', 'Redux', 'Semantic HTML', 'Styled-Components', 'Jest', 'BCrypt.js',],
             img: 'https://i.imgur.com/Obxv1m9.png',
@@ -33,7 +33,7 @@ function Projects() {
         },
         {
             name: 'ImmuTrack',
-            description: 'ImmuTrack is an application that lets users keep track of which immunizations both they and their dependents have received, and easily tell which immunizations they may be due for.',
+            description: 'ImmuTrack lets users keep track of which immunizations both they and their dependents have received, and easily tell which immunizations they may be due for.',
             role: 'Back-End Developer',
             technologies: ['Node.js', 'Express', 'Knex.js', 'SQLite3', 'JSON Web Token'],
             img: 'https://i.imgur.com/3zDuOpE.png',

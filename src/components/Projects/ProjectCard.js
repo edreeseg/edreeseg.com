@@ -14,11 +14,11 @@ function ProjectCard({ info: { name, description, role, technologies, img, liveU
                 <div className="projects-card-links">
                     <a href={liveUrl} target="_blank" rel="noopener noreferrer">View Live</a>
                     <a href={repoUrl} target="_blank" rel="noopener noreferrer">Github Repo</a>
-                    <FontAwesomeIcon icon={expanded ? faAngleUp : faAngleDown} size="2x" onClick={() => setExpanded(prev => !prev)}/>
+                    <FontAwesomeIcon icon={expanded ? faAngleUp : faAngleDown} size="2x" onClick={() => setExpanded(prev => !prev)} />
                 </div>
                 <CSSTransition in={expanded} timeout={200} classNames="expand">
                     <section className="projects-expanded-info">
-                        <h3>Role</h3>
+                        <h3>Role:</h3>
                         <p>{role}</p>
                         <h3>Technologies Used:</h3>
                         <p>{technologies.join(', ')}</p>

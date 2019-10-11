@@ -8,8 +8,8 @@ function About() {
     return (
         <section className="about-container">
             <section className="about-calls-to-action">
-                <Link to="projects-container">View Projects</Link>
-                <Link to="contact-container">Contact Me</Link>
+                <Link to="projects-container" spy={true} smooth={true} offset={-120} duration={500}>View Projects</Link>
+                <Link to="contact-container" spy={true} smooth={true} offset={-120} duration={500}>Contact Me</Link>
             </section>
             <section className="about-synopsis">
                 <p>I'm Ed!  I'm a software engineer looking to build great things with great people.</p>

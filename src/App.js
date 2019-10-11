@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, Greeting, About, Projects } from './components';
+import { Nav, Greeting, About, Projects, Skills } from './components';
 
 class App extends React.Component {
 
@@ -10,6 +10,7 @@ class App extends React.Component {
         <Greeting />
         <About />
         <Projects />
+        <Skills />
       </>
     );
   }
