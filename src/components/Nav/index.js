@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { CSSTransition } from 'react-transition-group';
 import { faArrowAltCircleRight, faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons';
@@ -7,6 +7,14 @@ import './Nav.scss';
 
 function Nav() {
     const [open, setOpen] = useState(false);
+    const checkForDesktop = () => {
+        if (window.innerWidth >= 1100) setOpen(true);
+        else setOpen(false);
+    };
+    useEffect(() => {
+        window.addEventListener('resize', checkForDesktop);
+        return () => window.removeEventListener('resize', checkForDesktop);
+    });
     return (
         <nav className="nav-container">
             <CSSTransition in={open} timeout={300} classNames="button-slide">

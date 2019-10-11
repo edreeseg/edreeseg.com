@@ -9,6 +9,10 @@
     height: 350px;
     z-index: 0;
 
+    @media #{$desktop}{
+        width: 40%;
+    }
+
     svg {
         z-index: -1;
     }

@@ -35,7 +35,7 @@ class Skills extends React.Component {
         window.addEventListener('resize', this.setCoordinates)
     }
     componentWillUnmount() {
-        window.removeEventListener(this.setCoordinates);
+        window.removeEventListener('resize', this.setCoordinates);
     }
     setCoordinates = () => {
         const { left, right, top, bottom, height, width } = this.containerRef.current.getBoundingClientRect();
