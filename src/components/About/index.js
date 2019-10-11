@@ -12,7 +12,7 @@ function About() {
                 <Link to="contact-container">Contact Me</Link>
             </section>
             <section className="about-synopsis">
-                <p>I'm Ed!  I'm a full-stack software engineer looking to build great things with great people.</p>
+                <p>I'm Ed!  I'm a software engineer looking to build great things with great people.</p>
                 <p>Connect with me on social media!  I look forward to hearing from you.</p>
             </section>
             <section className="about-social-media">
