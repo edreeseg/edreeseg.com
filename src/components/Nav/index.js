@@ -25,8 +25,8 @@ function Nav() {
             <h1>Ed Reeseg</h1>
             <CSSTransition in={open} timeout={300} classNames="nav-slide">
                 <div className="nav-links">
-                    <Link to="projects-container" spy={true} smooth={true} offset={-120} duration={700}>Projects</Link>
-                    <Link to="skills-bounce" spy={true} smooth={true} offset={window.innerWidth >= 1100 ? -170 : -120} duration={700}>Skills</Link>
+                    <Link to="projects-container" spy={true} smooth={true} offset={window.innerWidth >= 1100 ? -170 : -120} duration={700}>Projects</Link>
+                    <Link to="skills-bounce" spy={true} smooth={true} offset={window.innerWidth >= 1100 ? -220 : -170} duration={700}>Skills</Link>
                     <Link to="contact-container" spy={true} smooth={true} offset={-120} duration={700}>Contact</Link>
                 </div>
             </CSSTransition>

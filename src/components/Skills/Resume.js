@@ -26,12 +26,12 @@ class Resume extends React.Component {
     }
     render() {
         return (
-            <a href="https://www.docdroid.net/y2qPVi5/ed-reeseg-resume.pdf" target="_blank" rel="noreferrer noopener">
-                <div className="skills-resume">
-                    <FontAwesomeIcon icon={faFilePdf} size="2x" color="#ff0000" />
-                    <h3>Click Here</h3>
-                </div>
-            </a>
+            <div className="skills-resume">
+                <a href="https://www.docdroid.net/y2qPVi5/ed-reeseg-resume.pdf" target="_blank" rel="noreferrer noopener">
+                    <FontAwesomeIcon icon={faFilePdf} size="2x" color="#00b3ca" />
+                    <p>Click Here</p>
+                </a>
+            </div>
         );
     }
 }
