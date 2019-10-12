@@ -1,13 +1,19 @@
 @import '../../styles/variables.scss';
 @import '../../styles/mixins.scss';
 
-.skills-container {
+.skills-container{
     @include border-header;
-    display: flex;
-    justify-content:center;
-    align-items: flex-end;
+}
+.skills-bounce {
+    position: relative;
     height: 350px;
     z-index: 0;
+
+    @media #{$desktop}{
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
 
     svg {
         z-index: -1;

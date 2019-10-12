@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { CSSTransition } from 'react-transition-group';
 import { faArrowAltCircleRight, faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons';
@@ -7,6 +7,14 @@ import './Nav.scss';
 
 function Nav() {
     const [open, setOpen] = useState(false);
+    const checkForDesktop = () => {
+        if (window.innerWidth >= 1100) setOpen(true);
+        else setOpen(false);
+    };
+    useEffect(() => {
+        window.addEventListener('resize', checkForDesktop);
+        return () => window.removeEventListener('resize', checkForDesktop);
+    });
     return (
         <nav className="nav-container">
             <CSSTransition in={open} timeout={300} classNames="button-slide">
@@ -17,9 +25,9 @@ function Nav() {
             <h1>Ed Reeseg</h1>
             <CSSTransition in={open} timeout={300} classNames="nav-slide">
                 <div className="nav-links">
-                    <Link to="projects-container" spy={true} smooth={true} offset={-120} duration={500}>Projects</Link>
-                    <Link to="skills-container" spy={true} smooth={true} offset={-120} duration={500}>Skills</Link>
-                    <Link to="contact-container" spy={true} smooth={true} offset={-120} duration={500}>Contact</Link>
+                    <Link to="projects-container" spy={true} smooth={true} offset={-120} duration={700}>Projects</Link>
+                    <Link to="skills-bounce" spy={true} smooth={true} offset={window.innerWidth >= 1100 ? -170 : -120} duration={700}>Skills</Link>
+                    <Link to="contact-container" spy={true} smooth={true} offset={-120} duration={700}>Contact</Link>
                 </div>
             </CSSTransition>
         </nav>
