@@ -7,7 +7,7 @@ function Projects() {
         {
             name: 'Inquiry',
             description: 'Inquiry facilitates communication between independent contractors and those looking to hire them - providing for simplified scheduling and convenient communication between parties.',
-            role: 'Full-Stack Software Engineer',
+            role: 'Full-Stack Developer',
             technologies: ['React', 'Redux', 'React Hooks', 'OAuth2', 'Node.js', 'Express', 'BCrypt.js', 'Jest', 'PostgreSQL', 'Semantic HTML'],
             img: 'https://i.imgur.com/88dJcjs.png',
             liveUrl: 'https://affectionate-almeida-c22cb1.netlify.com/',
