@@ -17,12 +17,13 @@
         background: $dark-accent;
         color: $base-color;
         border-radius: 5px;
+        font-family: "Lucida Console", Monaco, monospace;
 
         &:first-child {
             margin-right: 10%;
         }
         &:hover {
-            color: $accent-color;
+            background: rgba(4, 8, 23, 0.9);
         }
     }
 }
