@@ -11,10 +11,12 @@
     justify-content: center;
     z-index: 1;
     background: #b0b6b6;
+    border-bottom: 3px solid $accent-color;
 
     @media #{$desktop}{
         flex-direction: column;
         justify-content: space-around;
+        padding-top: 15px
     }
 
     h1 {

@@ -19,6 +19,7 @@
 
     @media #{$desktop}{
         width: 45%;
+        margin-bottom: 50px;
     }
 
     h3 {
@@ -50,17 +51,28 @@
 }
 
 .projects-card-links {
-    display: flex;
-    align-items: center;
     margin: 20px 0;
+
+    @media #{$desktop}{
+        margin: 40px 0;
+    }
 
     a {
         margin-right: 7%;
         border: 1px solid $dark-accent;
+        border-radius: 5px;
         font-size: 1.8rem;
         color: $dark-accent;
         text-decoration: none;
         padding: 5px 4%;
+
+        @media #{$tiny}{
+            font-size: 4.5vw;
+        }
+
+        &:hover {
+            border: 1px solid $accent-color;
+        }
     }
 
     svg {

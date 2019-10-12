@@ -50,9 +50,9 @@ class Skills extends React.Component {
     }
     render() {
         return (
-            <>
-                <section className="skills-container" ref={this.containerRef}>
-                    <h2>Skills</h2>
+            <section className="skills-container">
+                <h2>Skills</h2>
+                <div className="skills-bounce" ref={this.containerRef}>
                     <FontAwesomeIcon onClick={this.handlePause} icon={this.state.paused ? faPlayCircle : faPauseCircle} size="2x" />
                     {
                         this.state.top ?
@@ -70,12 +70,12 @@ class Skills extends React.Component {
                                     paused={this.state.paused}
                                 />) : null
                     }
-                </section>
+                </div>
                 <section className="skills-resume-container">
                     <p>For a good look at my experience and a short summary of my skills, please click below to view or download my resume.</p>
                     <Resume />
                 </section>
-            </>
+            </section>
         );
     }
 }

@@ -21,15 +21,13 @@ class Greeting extends React.Component {
     }
     render() {
         return (
-            <section className="greeting-container">
-                <div className="greeting-content">
+                <header className="greeting-content">
                     <div className="greeting-text">
                         <p>Software Engineer</p>
                         <p>React <span>&&</span> Redux <span>&&</span> Node.js <span>&&</span> PostgreSQL <span>&&</span></p>
                         <p className="greeting-blink">{this.state.blink ? ' ' : '█'}</p>
                     </div>
-                </div>
-            </section>
+                </header>
         );
     }
 }
