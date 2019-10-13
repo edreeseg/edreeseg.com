@@ -67,22 +67,12 @@
     }
 
     a {
+        @include btn;
         margin-right: 7%;
-        border: 1px solid $dark-accent;
-        border-radius: 5px;
-        color: $base-color;
-        background: $dark-accent;
-        text-decoration: none;
-        padding: 5px 4%;
-        font-family: "Lucida Console", Monaco, monospace;
 
         @media #{$tiny}{
             font-size: 4.5vw;
             margin-bottom: 10px;
-        }
-
-        &:hover {
-            background: rgba(4, 8, 23, 0.9);
         }
     }
 

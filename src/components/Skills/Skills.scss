@@ -27,6 +27,15 @@
         top: 10px;
         left: 10px;
         z-index: 0;
+        color: $dark-accent;
+
+        &:hover {
+            cursor: pointer;
+            color: rgba(4, 8, 23, 0.7);
+        }
+        &:active {
+            color: rgba(4, 8, 23, 0.4);
+        }
     }
 }
 .skills-resume-container {
@@ -49,19 +58,9 @@
     color: $dark-accent;
 
     a {
+        @include btn;
         display: flex;
         align-items: center;
-        padding: 10px 2%;
-        background: $dark-accent;
-        color: $base-color;
-        border-radius: 5px;
-        font-size: 1.6rem;
-        font-family: "Lucida Console", Monaco, monospace;
-
-        &:hover {
-            background: rgba(4, 8, 23, 0.9);
-            cursor: pointer;
-        }
     }
    svg {
         margin-right: 15%;
