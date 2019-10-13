@@ -27,7 +27,7 @@ class Resume extends React.Component {
     render() {
         return (
             <div className="skills-resume">
-                <a href="https://www.docdroid.net/y2qPVi5/ed-reeseg-resume.pdf" target="_blank" rel="noreferrer noopener">
+                <a href="https://www.docdroid.net/H0W8omn/ed-reeseg-resume.pdf" target="_blank" rel="noreferrer noopener">
                     <FontAwesomeIcon icon={faFilePdf} size="2x" color="#00b3ca" />
                     <p>Click Here</p>
                 </a>
