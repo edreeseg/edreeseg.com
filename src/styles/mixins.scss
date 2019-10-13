@@ -20,3 +20,23 @@
         font-family: 'Economica', sans-serif;
     }
 }
+
+@mixin btn {
+    font-family: "Lucida Console", Monaco, monospace;
+    color: $base-color;
+    background: $dark-accent;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 8px 2%;
+    border: 1px solid $dark-accent;
+
+    &:hover {
+        background: rgba(4, 8, 23, 0.7);
+        cursor: pointer;
+    }
+    &:active {
+        background: $base-color;
+        color: $dark-accent;
+        transform: translateY(2px);
+    }
+}

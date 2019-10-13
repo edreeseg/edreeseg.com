@@ -17,13 +17,13 @@ function About() {
             </section>
             <section className="about-social-media">
                 <a href="https://www.linkedin.com/in/ed-reeseg-30a8b284/" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faLinkedin} size="3x" color="#00b3ca" />
+                    <FontAwesomeIcon icon={faLinkedin} size="3x" />
                 </a>
                 <a href="https://github.com/edreeseg" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faGithubSquare} size="3x" color="#00b3ca" />
+                    <FontAwesomeIcon icon={faGithubSquare} size="3x" />
                 </a>
                 <a href="https://twitter.com/edreeseg" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faTwitterSquare} size="3x" color="#00b3ca" />
+                    <FontAwesomeIcon icon={faTwitterSquare} size="3x" />
                 </a>
             </section>
         </section>
