@@ -64,9 +64,13 @@
             height: 50px;
             color: $dark-accent;
             border-top: 2px solid $tertiary-color;
+            transition: 0.2s;
 
             &:hover {
-                border-top: 2px solid $accent-color;
+                color: $base-color;
+            }
+            &:active {
+                color:  $accent-color;
             }
         }
         @media #{$tiny}{

@@ -4,7 +4,6 @@ import { faHtml5, faCss3, faLess, faSass, faReact, faJs, faNode, faPython } from
 import { faPauseCircle, faPlayCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SkillIcon from './SkillIcon';
-import Resume from './Resume';
 
 class Skills extends React.Component {
     constructor(props) {
@@ -27,6 +26,8 @@ class Skills extends React.Component {
                 { icon: faPython, color: '#3572A5' }
             ],
             paused: false,
+            skillsList: ['JavaScript', 'React', 'React Hooks', 'Node.js', 'Express', 'PostgreSQL', 'Semantic HTML', 'Responsive Design', 'CSS', 'LESS', 'SASS / SCSS', 'JSON', 'Python', 'Git', 'Jest'],
+            selected: null,
         };
         this.containerRef = React.createRef();
     }
@@ -61,20 +62,15 @@ class Skills extends React.Component {
                                     key={icon.iconName}
                                     icon={icon}
                                     color={color}
-                                    left={this.state.left}
-                                    right={this.state.right}
-                                    top={this.state.top}
-                                    bottom={this.state.bottom}
                                     height={this.state.height}
                                     width={this.state.width}
                                     paused={this.state.paused}
                                 />) : null
                     }
                 </div>
-                <section className="skills-resume-container">
-                    <p>For a good look at my experience and a short summary of my skills, please click below to view or download my resume.</p>
-                    <Resume />
-                </section>
+                <ul className="skills-list">
+                    {this.state.skillsList.map(skill => <li key={skill}>{skill}</li>)}
+                </ul>
             </section>
         );
     }

@@ -38,7 +38,7 @@ class SkillIcon extends React.Component {
         const dy = outsideBoundsY ? this.state.dy * -1 : this.state.dy;
         const stuckX = this.state.impactX && outsideBoundsX;
         const stuckY = this.state.impactY && outsideBoundsY;
-        if (this.props.paused){ // Reset icons, but do not move otherwise, when paused
+        if (this.props.paused) { // Reset icons, but do not move otherwise, when paused
             return this.setState(prevState => {
                 return {
                     x: outsideBoundsX ? this.props.width / 2 : prevState.x,
