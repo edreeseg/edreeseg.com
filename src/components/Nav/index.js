@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { CSSTransition } from 'react-transition-group';
-import { faArrowAltCircleRight, faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 import './Nav.scss';
 
 function Nav() {
@@ -19,7 +18,7 @@ function Nav() {
         <nav className="nav-container">
             <CSSTransition in={open} timeout={300} classNames="button-slide">
                 <button className="nav-open-links" onClick={() => setOpen(prevOpen => !prevOpen)}>
-                    <FontAwesomeIcon icon={open ? faArrowAltCircleLeft : faArrowAltCircleRight} style={{ color: '#040817' }} size="2x" />
+                    {open ? <FaArrowAltCircleLeft /> : <FaArrowAltCircleRight />}
                 </button>
             </CSSTransition>
             <h1>Ed Reeseg</h1>

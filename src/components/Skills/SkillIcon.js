@@ -1,6 +1,4 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 
 class SkillIcon extends React.Component {
     constructor(props) {
@@ -10,7 +8,6 @@ class SkillIcon extends React.Component {
             y: null,
             dx: null,
             dy: null,
-            size: 50,
             impactX: false,
             impactY: false,
         };
@@ -22,8 +19,8 @@ class SkillIcon extends React.Component {
             possibilities.push(i);
         }
         this.setState({
-            x: this.props.width / 2,
-            y: this.props.height / 2,
+            x: this.props.containerHeight / 2,
+            y: this.props.containerWidth / 2,
             dx: possibilities[Math.floor(Math.random() * possibilities.length)],
             dy: possibilities[Math.floor(Math.random() * possibilities.length)],
         }, () => window.setInterval(this.draw, 10));
@@ -32,8 +29,8 @@ class SkillIcon extends React.Component {
         window.clearInterval(this.draw);
     }
     draw = () => {
-        const outsideBoundsX = this.state.x + this.state.size >= this.props.width || this.state.x <= 0;
-        const outsideBoundsY = this.state.y + this.state.size >= this.props.height || this.state.y <= 0;
+        const outsideBoundsX = this.state.x + this.props.size - this.props.padding >= this.props.containerWidth || this.state.x + this.props.padding <= 0;
+        const outsideBoundsY = this.state.y + this.props.size - this.props.padding >= this.props.containerHeight || this.state.y + this.props.padding <= 0;
         const dx = outsideBoundsX ? this.state.dx * -1 : this.state.dx;
         const dy = outsideBoundsY ? this.state.dy * -1 : this.state.dy;
         const stuckX = this.state.impactX && outsideBoundsX;
@@ -41,16 +38,16 @@ class SkillIcon extends React.Component {
         if (this.props.paused) { // Reset icons, but do not move otherwise, when paused
             return this.setState(prevState => {
                 return {
-                    x: outsideBoundsX ? this.props.width / 2 : prevState.x,
-                    y: outsideBoundsY ? this.props.height / 2 : prevState.y,
+                    x: outsideBoundsX ? this.props.containerWidth / 2 : prevState.x,
+                    y: outsideBoundsY ? this.props.containerHeight / 2 : prevState.y,
                 };
             });
         };
         this.setState(prevState => {
             return {
                 // Reset if stuck
-                x: stuckX || stuckY ? this.props.width / 2 : prevState.x + dx,
-                y: stuckX || stuckY ? this.props.height / 2 : prevState.y + dy,
+                x: stuckX || stuckY ? this.props.containerWidth / 2 : prevState.x + dx,
+                y: stuckX || stuckY ? this.props.containerHeight / 2 : prevState.y + dy,
                 dx,
                 dy,
                 impactX: outsideBoundsX ? true : false,
@@ -59,27 +56,16 @@ class SkillIcon extends React.Component {
         });
     }
     render() {
-        return this.props.icon.iconName === 'js' ? (
-            <div style={{
-                position: 'absolute',
-                top: this.state.y,
-                left: this.state.x,
-                fontSize: this.state.size,
-                height: this.state.size,
-                background: 'black',
-            }}>
-                <FontAwesomeIcon color={this.props.color} icon={this.props.icon} />
-            </div>
-        ) : (
-                <FontAwesomeIcon color={this.props.color} icon={this.props.icon} style={
-                    {
-                        position: 'absolute',
-                        top: this.state.y,
-                        left: this.state.x,
-                        fontSize: this.state.size,
-                    }
-                } />
-            );
+        return (
+            <this.props.icon color={this.props.color} style={
+                {
+                    position: 'absolute',
+                    top: this.state.y,
+                    left: this.state.x,
+                    fontSize: this.props.size,
+                }
+            } />
+        );
     }
 }
 

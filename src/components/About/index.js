@@ -9,7 +9,7 @@ function About() {
             <section className="about-synopsis">
                 <div className="about-content">
                     <p>I'm Ed, and I'm looking to create great things with great people.</p>
-                    <p>After spending over five years in the mental health field,</p>
+                    <p></p>
                 </div>
                 <div className="about-content">
                     <div className="img-placeholder"></div>

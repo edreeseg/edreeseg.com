@@ -1,6 +1,5 @@
 import React from 'react';
-import { faLinkedin, faGithubSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaLinkedin, FaGithubSquare, FaTwitterSquare } from 'react-icons/fa';
 import './Contact.scss';
 
 function Contact() {
@@ -10,13 +9,13 @@ function Contact() {
             <p>Feel free to get in touch through social media if convenient, I'm always happy to have a conversation!</p>
             <div className="contact-social-media">
                 <a href="https://www.linkedin.com/in/ed-reeseg-30a8b284/" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faLinkedin} size="3x" />
+                    <FaLinkedin />
                 </a>
                 <a href="https://github.com/edreeseg" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faGithubSquare} size="3x" />
+                    <FaGithubSquare />
                 </a>
                 <a href="https://twitter.com/edreeseg" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faTwitterSquare} size="3x" />
+                    <FaTwitterSquare />
                 </a>
             </div>
             <p>It may take me a bit longer to notice, but I'm happy to receive an email, too.</p>
