@@ -3,6 +3,7 @@
 
 .about-container {
     margin-top: 15px;
+    @include border-header;
 }
 
 .about-calls-to-action {

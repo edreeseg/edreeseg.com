@@ -5,9 +5,9 @@ import './About.scss';
 function About() {
     return (
         <section className="about-container">
+            <h2>About</h2>
             <section className="about-synopsis">
                 <div className="about-content">
-                    <h2>About Me</h2>
                     <p>I'm Ed, and I'm looking to create great things with great people.</p>
                     <p>After spending over five years in the mental health field,</p>
                 </div>
