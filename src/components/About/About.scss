@@ -25,31 +25,46 @@
 .about-synopsis {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
 
     @media #{$desktop}{
         flex-direction: row;
         justify-content: center;
-        width: 50%;
         margin: 0 auto;
     }
 
     .about-content {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         margin-bottom: 40px;
+
+        @media #{$desktop} {
+            &:first-child {
+                margin-right: 20%;
+            }
+        }
 
         h2 {
             font-size: 3rem;
             font-family: 'Economica', sans-serif;
         }
+        p {
+            font-size: 1.7rem;
+            line-height: 2.3rem;
+            margin-bottom: 1.5rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
         .img-placeholder {
             width: 50vw;
             height: 50vw;
-            max-height: 250px;
-            max-width: 250px;
+            max-height: 400px;
+            max-width: 400px;
             border: 1px solid $dark-accent;
             border-radius: 50vw;
         }
