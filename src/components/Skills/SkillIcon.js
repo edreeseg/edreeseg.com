@@ -1,4 +1,5 @@
 import React from 'react';
+import { CSSTransition } from 'react-transition-group';
 
 class SkillIcon extends React.Component {
     constructor(props) {
@@ -57,14 +58,15 @@ class SkillIcon extends React.Component {
     }
     render() {
         return (
-            <this.props.icon color={this.props.color} style={
-                {
-                    position: 'absolute',
-                    top: this.state.y,
-                    left: this.state.x,
-                    fontSize: this.props.size,
-                }
-            } />
+            <CSSTransition in={this.props.selected} timeout={300} classNames="icon-grow">
+                <this.props.icon color={this.props.color} style={
+                    {
+                        position: 'absolute',
+                        top: this.state.y,
+                        left: this.state.x,
+                    }
+                } />
+            </CSSTransition>
         );
     }
 }

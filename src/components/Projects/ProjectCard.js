@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 
-function ProjectCard({ info: { name, description, role, technologies, img, liveUrl, repoUrl } }) {
+function ProjectCard({ info: { name, description, role, details, technologies, img, liveUrl, repoUrl } }) {
     const [expanded, setExpanded] = useState(false);
     return (
         <section className="projects-card">

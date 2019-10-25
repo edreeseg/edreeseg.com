@@ -15,15 +15,15 @@ class Skills extends React.Component {
             height: null,
             width: null,
             icons: [
-                { name: 'html', icon: FaHtml5, color: '#E44D26', size: 50, padding: 0 },
-                { name: 'css', icon: FaCss3, color: '#1572B6', size: 50, padding: 0 },
-                { name: 'less', icon: FaLess, color: '#2A4D80', size: 50, padding: 0 },
-                { name: 'sass', icon: FaSass, color: '#CB6699', size: 50, padding: 0 },
-                { name: 'react', icon: FaReact, color: '#61dbfb', size: 50, padding: 0 },
-                { name: 'js', icon: DiJavascript1, color: '#222', size: 50, padding: 8 },
-                { name: 'node', icon: FaNode, color: '#83CD29', size: 50, padding: 0 },
-                { name: 'python', icon: FaPython, color: '#3572A5', size: 50, padding: 0 },
-                { name: 'postgres', icon: DiPostgresql, color: '#0064a5', size: 70, padding: 8 },
+                { name: 'Semantic HTML', icon: FaHtml5, color: '#E44D26', size: 50, padding: 0 },
+                { name: 'CSS', icon: FaCss3, color: '#1572B6', size: 50, padding: 0 },
+                { name: 'LESS', icon: FaLess, color: '#2A4D80', size: 50, padding: 0 },
+                { name: 'SASS / SCSS', icon: FaSass, color: '#CB6699', size: 50, padding: 0 },
+                { name: 'React', icon: FaReact, color: '#61dbfb', size: 50, padding: 0 },
+                { name: 'JavaScript', icon: DiJavascript1, color: '#222', size: 50, padding: 8 },
+                { name: 'Node.js', icon: FaNode, color: '#83CD29', size: 50, padding: 0 },
+                { name: 'Python', icon: FaPython, color: '#3572A5', size: 50, padding: 0 },
+                { name: 'PostgreSQL', icon: DiPostgresql, color: '#0064a5', size: 70, padding: 8 },
             ],
             paused: false,
             skillsList: ['JavaScript', 'React', 'React Hooks', 'Node.js', 'Express', 'PostgreSQL', 'Semantic HTML', 'Responsive Design', 'CSS', 'LESS', 'SASS / SCSS', 'JSON', 'Python', 'Git', 'Jest'],
@@ -49,6 +49,12 @@ class Skills extends React.Component {
             };
         });
     }
+    handleSelect = skill => {
+        this.setState(prevState => {
+            const newSkill = prevState.selected === skill ? null : skill;
+            return { selected: newSkill };
+        });
+    }
     render() {
         return (
             <section className="skills-container">
@@ -64,14 +70,15 @@ class Skills extends React.Component {
                                     color={color}
                                     containerHeight={this.state.height}
                                     containerWidth={this.state.width}
-                                    size={size}
+                                    selected={this.state.selected === name}
+                                    size={this.state.selected === name ? 75 : 50}
                                     padding={padding}
                                     paused={this.state.paused}
                                 />) : null
                     }
                 </div>
                 <ul className="skills-list">
-                    {this.state.skillsList.map(skill => <li key={skill}>{skill}</li>)}
+                    {this.state.skillsList.map(skill => <li key={skill} onClick={() => this.handleSelect(skill)}>{skill}</li>)}
                 </ul>
             </section>
         );
