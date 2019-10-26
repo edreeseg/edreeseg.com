@@ -14,7 +14,7 @@ function About() {
                     <p>If anything I've said here is of interest to you, and you want to talk to me about an opportunity or just shoot the breeze for a while, please don't hesitate to reach out.  I know time is valuable, and I promise not to waste yours.</p>
                 </div>
                 <div className="about-content">
-                    <div className="img-placeholder"></div>
+                    <img src="https://i.imgur.com/QdPmmiz.jpg" alt="head shot" className="about-img" />
                 </div>
             </section>
             <section className="about-calls-to-action">
