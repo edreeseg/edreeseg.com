@@ -56,8 +56,11 @@
 
 .projects-card-links {
     margin: 20px 0;
+    display: flex;
+    justify-content: flex-end;
 
     @media #{$desktop}{
+        justify-content: flex-start;
         margin: 40px 0;
     }
     @media #{$tiny}{
@@ -77,6 +80,7 @@
     }
 
     svg {
+        font-size: 4rem;
         @media #{$desktop}{
             display: none;
         }
@@ -92,6 +96,10 @@
         &:last-of-type {
             margin-bottom: 0;
         }
+    }
+    ul {
+        margin-bottom: 15px;
+        list-style-type: disc;
     }
 }
 .expand-enter {

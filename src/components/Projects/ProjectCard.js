@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 
-function ProjectCard({ info: { name, description, role, technologies, img, liveUrl, repoUrl } }) {
+function ProjectCard({ info: { name, description, role, details, technologies, img, liveUrl, repoUrl } }) {
     const [expanded, setExpanded] = useState(false);
     return (
         <section className="projects-card">
@@ -14,7 +13,7 @@ function ProjectCard({ info: { name, description, role, technologies, img, liveU
                 <div className="projects-card-links">
                     <a href={liveUrl} target="_blank" rel="noopener noreferrer">View Live</a>
                     <a href={repoUrl} target="_blank" rel="noopener noreferrer">Github Repo</a>
-                    <FontAwesomeIcon icon={expanded ? faAngleUp : faAngleDown} size="2x" onClick={() => setExpanded(prev => !prev)} />
+                    {expanded ? <FaAngleUp onClick={() => setExpanded(prev => !prev)} /> : <FaAngleDown onClick={() => setExpanded(prev => !prev)} />}
                 </div>
                 <CSSTransition in={expanded} timeout={200} classNames="expand">
                     <section className="projects-expanded-info">

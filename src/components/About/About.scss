@@ -2,7 +2,8 @@
 @import '../../styles/mixins.scss';
 
 .about-container {
-    margin-top: 50px;
+    margin-top: 15px;
+    @include border-header;
 }
 
 .about-calls-to-action {
@@ -22,39 +23,51 @@
     }
 }
 .about-synopsis {
-    width: 75%;
-    margin: 25px auto;
-    text-align: center;
-    line-height: 2.2rem;
-
-    p {
-        font-size: 1.8rem;
-
-        &:first-child {
-            margin-bottom: 15px;
-        }
-    }
-}
-.about-social-media {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
 
-    a {
-        margin-left: 10%;
+    @media only screen and (min-width: 1400px){
+        flex-direction: row;
+        justify-content: center;
+        margin: 0 auto;
     }
-    a:first-child {
-        margin-left: 0;
-    }
 
-    svg {
-        color: #00b3ca;
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
 
-        &:hover {
-            color:  rgba(0,179,202, 0.7);
+        @media only screen and (min-width: 1400px) {
+            &:first-child {
+                margin-right: 20%;
+            }
         }
-        &:active {
-            color: #005965;
-            transform: translateY(2px);
+
+        h2 {
+            font-size: 3rem;
+            font-family: 'Economica', sans-serif;
+        }
+        p {
+            font-size: 1.7rem;
+            line-height: 2.3rem;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .about-img {
+            width: 70vw;
+            height: 70vw;
+            max-height: 400px;
+            max-width: 400px;
+            border: 1px solid $dark-accent;
+            border-radius: 50vw;
         }
     }
 }

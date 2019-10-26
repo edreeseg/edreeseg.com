@@ -9,8 +9,8 @@ class App extends React.Component {
         <Nav />
         <Greeting />
         <About />
-        <Projects />
         <Skills />
+        <Projects />
         <Contact />
       </>
     );
