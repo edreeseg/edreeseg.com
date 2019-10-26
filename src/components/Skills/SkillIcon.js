@@ -24,10 +24,14 @@ class SkillIcon extends React.Component {
             y: this.props.containerWidth / 2,
             dx: possibilities[Math.floor(Math.random() * possibilities.length)],
             dy: possibilities[Math.floor(Math.random() * possibilities.length)],
-        }, () => window.setInterval(this.draw, 10));
+        }, () => requestAnimationFrame(this.draw));
     }
-    componentWillUnmount() {
-        window.clearInterval(this.draw);
+    componentDidUpdate(prevProps, prevState){
+        const unpaused = prevProps.paused && !this.props.paused;
+        const unselected = prevProps.selected && !this.props.selected;
+        if (unpaused || unselected){
+            requestAnimationFrame(this.draw);
+        }
     }
     draw = () => {
         const outsideBoundsX = this.state.x + this.props.size - this.props.padding >= this.props.containerWidth || this.state.x + this.props.padding <= 0;
@@ -55,6 +59,7 @@ class SkillIcon extends React.Component {
                 impactY: outsideBoundsY ? true : false,
             };
         });
+        requestAnimationFrame(this.draw);
     }
     render() {
         return (
