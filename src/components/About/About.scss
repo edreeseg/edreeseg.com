@@ -25,13 +25,16 @@
 .about-synopsis {
     display: flex;
     flex-direction: column;
-    width: 80%;
     margin: 0 auto;
 
-    @media only screen and (min-width: 1400px){
+    @media #{$desktop}{
         flex-direction: row;
         justify-content: center;
         margin: 0 auto;
+    }
+
+    @media only screen and (min-width: 1500px) {
+        width: 80%;
     }
 
     .about-content {
@@ -41,9 +44,9 @@
         align-items: center;
         margin-bottom: 40px;
 
-        @media only screen and (min-width: 1400px) {
+        @media #{$desktop} {
             &:first-child {
-                margin-right: 20%;
+                margin-right: 5vw;
             }
         }
 
