@@ -19,7 +19,7 @@ function About() {
             </section>
             <section className="about-calls-to-action">
                 <Link to="projects-container" spy={true} smooth={true} offset={window.innerWidth >= 1100 ? -170 : -120} duration={700}>View Projects</Link>
-                <Link to="contact-container" spy={true} smooth={true} offset={-120} duration={700}>Contact Me</Link>
+                <Link to="contact-container" spy={true} smooth={true} offset={-120} duration={1000}>Contact Me</Link>
             </section>
         </section>
     );
