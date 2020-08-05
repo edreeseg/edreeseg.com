@@ -6,7 +6,7 @@ function ProjectCard({ info: { name, description, role, details, technologies, i
     const [expanded, setExpanded] = useState(false);
     return (
         <section className="projects-card">
-            <img src={img} alt={name} />
+            {img}
             <div className="projects-card-text">
                 <h3>{name}</h3>
                 <p>{description}</p>
