@@ -8,13 +8,13 @@ function Contact() {
             <h2>Contact</h2>
             <p>Feel free to get in touch through social media if convenient, I'm always happy to have a conversation!</p>
             <div className="contact-social-media">
-                <a href="https://www.linkedin.com/in/ed-reeseg-30a8b284/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/ed-reeseg-30a8b284/" target="_blank" rel="noopener noreferrer" aria-label="navigate to linkedin">
                     <FaLinkedin />
                 </a>
-                <a href="https://github.com/edreeseg" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/edreeseg" target="_blank" rel="noopener noreferrer" aria-label="navigate to github">
                     <FaGithubSquare />
                 </a>
-                <a href="https://twitter.com/edreeseg" target="_blank" rel="noopener noreferrer">
+                <a href="https://twitter.com/edreeseg" target="_blank" rel="noopener noreferrer" aria-label="navigate to twitter">
                     <FaTwitterSquare />
                 </a>
             </div>
