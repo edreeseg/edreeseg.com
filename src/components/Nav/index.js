@@ -17,7 +17,7 @@ function Nav() {
     return (
         <nav className="nav-container">
             <CSSTransition in={open} timeout={300} classNames="button-slide">
-                <button className="nav-open-links" onClick={() => setOpen(prevOpen => !prevOpen)}>
+                <button className="nav-open-links" onClick={() => setOpen(prevOpen => !prevOpen)} aria-label="open nav bar">
                     {open ? <FaArrowAltCircleLeft /> : <FaArrowAltCircleRight />}
                 </button>
             </CSSTransition>
