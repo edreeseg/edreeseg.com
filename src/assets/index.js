@@ -22,6 +22,12 @@ import tipsease800png from './tipsease-800px.png';
 import tipsease800webp from './tipsease-800px.webp';
 import tipsease1200png from './tipsease-1200px.png';
 import tipsease1200webp from './tipsease-1200px.webp';
+import headshot200png from './headshot-200px.png';
+import headshot200webp from './headshot-200px.webp';
+import headshot400png from './headshot-400px.png';
+import headshot400webp from './headshot-400px.webp';
+import headshotFullpng from './headshot-full-size.png';
+import headshotFullwebp from './headshot-full-size.webp';
 
 export default {
   immutrack: {
@@ -74,6 +80,19 @@ export default {
       ${tipsease500webp} 500w,
       ${tipsease800webp} 800w,
       ${tipsease1200webp} 1200w
+    `,
+  },
+  headshot: {
+    src: headshot400png,
+    pngSrcSet: `
+      ${headshot200png} 200w,
+      ${headshot400png} 400w,
+      ${headshotFullpng} 676w
+    `,
+    webpSrcSet: `
+      ${headshot200webp} 200w,
+      ${headshot400webp} 400w,
+      ${headshotFullwebp} 676w
     `,
   },
 };

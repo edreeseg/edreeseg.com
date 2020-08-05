@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 import './About.scss';
+import imageInfo from '../../assets';
 
 function About() {
     return (
@@ -14,7 +15,18 @@ function About() {
                     <p>If anything I've said here is of interest to you, and you want to talk to me about an opportunity or just shoot the breeze for a while, please don't hesitate to reach out.  I know time is valuable, and I promise not to waste yours.</p>
                 </div>
                 <div className="about-content">
-                    <img src="https://i.imgur.com/QdPmmiz.jpg" alt="head shot" className="about-img" />
+                    <picture>
+                        <source
+                            type="image/webp"
+                            srcSet={imageInfo.headshot.webpSrcSet}
+                            alt="head shot"
+                        />
+                        <img src={imageInfo.headshot.src}
+                            srcSet={imageInfo.headshot.pngSrcSet}
+                            alt="head shot"
+                            className="about-img"
+                        />
+                    </picture>
                 </div>
             </section>
             <section className="about-calls-to-action">
