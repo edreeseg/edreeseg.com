@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ProjectCard from './ProjectCard';
+import imageInfo from '../../assets';
 import './Projects.scss';
 
 function Projects() {
@@ -12,7 +13,17 @@ function Projects() {
                 'Individual contributions including but not limited to complete setup of PostgreSQL database, RESTful Node API, completion of search components in React SPA, finalization of state management with Redux, designing function for sorting contractors by location, allowing for user registration/login compliant with OAuth2 using Google and Passport.js,  implementation of monthly subscription invoicing using Stripe.',
             ],
             technologies: ['React', 'Redux', 'React Hooks', 'OAuth2', 'Node.js', 'Express', 'BCrypt.js', 'Jest', 'PostgreSQL', 'Semantic HTML'],
-            img: 'https://i.imgur.com/88dJcjs.png',
+            img: (
+                <picture>
+                    <source
+                        type="image/webp"
+                        srcSet={imageInfo.inquiry.webpSrcSet}
+                        alt="inquiry"
+                    />
+                    <img src={imageInfo.inquiry.src}
+                    srcSet={imageInfo.inquiry.pngSrcSet} alt="Inquiry" />
+                </picture>
+            ),
             liveUrl: 'https://affectionate-almeida-c22cb1.netlify.com/',
             repoUrl: 'https://github.com/pt3-labs-contractor',
         },
@@ -27,7 +38,17 @@ function Projects() {
                 'Coordinated daily standup meetings to ensure blockers are addressed, progress is recognized, and plans are made for upcoming sprint.',
             ],
             technologies: ['React', 'React Hooks', 'Formik', 'Knex.js', 'SQLite3', 'PostgreSQL', 'Node.js', 'Express'],
-            img: 'https://i.imgur.com/EBvODJ2.png',
+            img: (
+                <picture>
+                    <source
+                        type="image/webp"
+                        srcSet={imageInfo.tipsease.webpSrcSet}
+                        alt="tipsease"
+                    />
+                    <img src={imageInfo.tipsease.src}
+                    srcSet={imageInfo.tipsease.pngSrcSet} alt="tipsease" />
+                </picture>
+            ),
             liveUrl: 'https://loving-banach-37576e.netlify.com/',
             repoUrl: 'https://github.com/bwpt-tipsease',
         },
@@ -40,7 +61,17 @@ function Projects() {
                 'Individual contributions including but not limited to design of user interface, creation of React SPA, utilizing CRUD operations for consumption of data from back end, implementation of state management using Redux.',
             ],
             technologies: ['React', 'Redux', 'Semantic HTML', 'Styled-Components', 'Jest', 'BCrypt.js',],
-            img: 'https://i.imgur.com/Obxv1m9.png',
+            img: (
+                <picture>
+                    <source
+                        type="image/webp"
+                        srcSet={imageInfo.souperStocker.webpSrcSet}
+                        alt="souper stocker"
+                    />
+                    <img src={imageInfo.souperStocker.src}
+                    srcSet={imageInfo.souperStocker.pngSrcSet} alt="souper stocker" />
+                </picture>
+            ),
             liveUrl: 'https://practical-bardeen-3a3b3e.netlify.com/',
             repoUrl: 'https://github.com/soup-build-week-pt-project/Souper-Stocker',
         },
@@ -53,7 +84,17 @@ function Projects() {
                 'Individual contributions including but not limited to design of data flow, implementation of relational database using Knex.js for SQLite3 and PostgreSQL, RESTful Node API with full CRUD operations, local user authentication including storage of user password hash/salt from bcrypt.',
             ],
             technologies: ['Node.js', 'Express', 'Knex.js', 'SQLite3', 'JSON Web Token'],
-            img: 'https://i.imgur.com/3zDuOpE.png',
+            img: (
+                <picture>
+                    <source
+                        type="image/webp"
+                        srcSet={imageInfo.immutrack.webpSrcSet}
+                        alt="immutrak"
+                    />
+                    <img src={imageInfo.immutrack.src}
+                    srcSet={imageInfo.immutrack.pngSrcSet} alt="immutrak" />
+                </picture>
+            ),
             liveUrl: 'https://musing-albattani-db7dc4.netlify.com/',
             repoUrl: 'https://github.com/buildweek-immunizationtracker/immunization-back-end',
 
