@@ -2,6 +2,7 @@ import React from 'react';
 import './Skills.scss';
 import { FaHtml5, FaCss3, FaLess, FaSass, FaReact, FaNode, FaPython, FaPauseCircle, FaPlayCircle } from 'react-icons/fa';
 import { DiJavascript1, DiPostgresql } from 'react-icons/di';
+import { SiSubversion } from 'react-icons/si';
 import SkillIcon from './SkillIcon';
 
 class Skills extends React.Component {
@@ -24,9 +25,10 @@ class Skills extends React.Component {
                 { name: 'Node.js', icon: FaNode, color: '#83CD29', size: 50, padding: 0 },
                 { name: 'Python', icon: FaPython, color: '#3572A5', size: 50, padding: 0 },
                 { name: 'PostgreSQL', icon: DiPostgresql, color: '#0064a5', size: 70, padding: 8 },
+                { name: 'Subversion', icon: SiSubversion, color: '#809CC9', size: 50, padding: 6 },
             ],
             paused: false,
-            skillsList: ['JavaScript', 'React', 'React Hooks', 'Node.js', 'Express', 'PostgreSQL', 'Semantic HTML', 'Responsive Design', 'CSS', 'LESS', 'SASS / SCSS', 'JSON', 'Python', 'Git', 'Jest'],
+            skillsList: ['JavaScript', 'React', 'React Hooks', 'Node.js', 'Express', 'PostgreSQL', 'Semantic HTML', 'Responsive Design', 'CSS', 'LESS', 'SASS / SCSS', 'JSON', 'Python', 'Git', 'Subversion', 'Jest'],
             selected: null,
         };
         this.containerRef = React.createRef();
